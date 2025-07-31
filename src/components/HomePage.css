@@ -333,6 +333,87 @@
   .video-grid {
     grid-template-columns: 1fr;
   }
+  
+  /* Mobile optimizations for database items */
+  .thought-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+  }
+  
+  .thought-row-number {
+    width: auto;
+    padding-right: 8px;
+    border-right: none;
+    margin-bottom: 4px;
+    font-size: 0.7em;
+  }
+  
+  .thought-date {
+    width: auto;
+    padding-left: 0;
+    font-size: 0.7em;
+    margin-bottom: 6px;
+    order: -1;
+  }
+  
+  .thought-title {
+    padding: 0;
+    font-size: 0.9em;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+  
+  .thought-type {
+    font-size: 0.6em;
+    padding: 2px 6px;
+    align-self: flex-end;
+  }
+  
+  /* Stack items more compactly on mobile */
+  .thought-item {
+    gap: 2px;
+  }
+  
+  /* Create a more compact mobile layout */
+  .thought-item {
+    display: grid;
+    grid-template-areas: 
+      "date type"
+      "title title"
+      "number number";
+    grid-template-columns: 1fr auto;
+    gap: 4px 8px;
+    padding: 10px;
+  }
+  
+  .thought-date {
+    grid-area: date;
+    margin: 0;
+    align-self: center;
+  }
+  
+  .thought-type {
+    grid-area: type;
+    margin: 0;
+    align-self: center;
+  }
+  
+  .thought-title {
+    grid-area: title;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .thought-row-number {
+    grid-area: number;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 0.7em;
+    opacity: 0.7;
+  }
 } 
 
 .project-item.coming-soon {

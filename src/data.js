@@ -41,7 +41,7 @@ The question isn't if agentic AI will change our lives. It's whether we're actua
   },
   {
     id: 2,
-    title: 'No Signal: A Developer\'s Journey to a Privacy-First P2P Communication Platform',
+        title: 'No Signal: A Privacy-First P2P Platform',
     type: 'Project Documentation',
     date: '2025-01-20',
     content: `No Signal is a hybrid peer-to-peer communication platform built from the ground up to be privacy-first user-friendly and completely open source. It supports decentralized messaging across both local and global networks using Bluetooth mDNS and WebRTC all secured by end-to-end encryption and powered by Web3 identity. This project is the result of years of iteration experimentation and growth. Since 2021 I've been trying to build the right communication system — one that doesn't rely on centralized servers respects user privacy and just works. No Signal is the result of that journey.
@@ -60,7 +60,7 @@ No Signal is my contribution to the future of decentralized and private communic
   },
   {
     id: 3,
-    title: 'Vibe Coding Misunderstood: The Real Role of Agentic AI and What People Are Getting Wrong',
+        title: 'The Real Role of Agentic AI and What People Are Getting Wrong',
     type: 'Essay',
     date: '2025-07-25',
     content: `There's been a lot of confusion lately around what vibe coding actually is. I've been seeing people throwing this term around like it means you're just casually coding with the help of an AI or that somehow using ChatGPT or Claude makes you a developer. The truth is most people don't understand what this technology actually is or what it's becoming.

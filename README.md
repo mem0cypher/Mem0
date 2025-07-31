@@ -24,8 +24,8 @@ This is a personal portfolio website showcasing projects and thoughts related to
 ## Essays and Documentation
 
 - The Future of Agentic AI Systems and Their Societal Implications
-- No Signal: A Developer's Journey to a Privacy-First P2P Communication Platform
-- Vibe Coding Misunderstood: The Real Role of Agentic AI and What People Are Getting Wrong
+- No Signal: A Privacy-First P2P Platform
+- The Real Role of Agentic AI and What People Are Getting Wrong
 
 ## Available Scripts
 
