@@ -19,12 +19,16 @@
   border-radius: 5px;
   overflow: hidden;
   margin-bottom: 30px;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .database-table th, .database-table td {
   border: 1px solid #00FFFF;
   padding: 12px;
   text-align: left;
+  white-space: nowrap;
 }
 
 .database-table th {
@@ -49,6 +53,8 @@
   display: block;
   transition: all 0.3s ease;
   padding: 5px;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .database-table a:hover {
@@ -63,6 +69,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .search-bar {
@@ -73,6 +81,8 @@
   border-radius: 4px;
   width: 250px;
   font-family: 'Courier New', monospace;
+  flex-grow: 1;
+  min-width: 150px;
 }
 
 .filter-button {
@@ -84,6 +94,7 @@
   border-radius: 4px;
   font-family: 'Courier New', monospace;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .filter-button:hover {
@@ -97,6 +108,8 @@
   align-items: center;
   margin-top: 20px;
   font-size: 0.9em;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 .status-dot {
@@ -118,4 +131,38 @@
   100% {
     box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
   }
-} 
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .database-page {
+    padding: 10px;
+  }
+  
+  .database-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-bar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .filter-button {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .database-table {
+    font-size: 0.8em;
+  }
+  
+  .database-table th, .database-table td {
+    padding: 8px 5px;
+  }
+  
+  .status-indicator {
+    font-size: 0.8em;
+  }
+}
