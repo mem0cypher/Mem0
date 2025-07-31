@@ -1,6 +1,31 @@
-# Getting Started with Create React App
+# Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a personal portfolio website showcasing projects and thoughts related to mem0 and agentic AI systems.
+
+## Features
+
+- Clean, modern dark theme interface
+- Project showcase with logos and links
+- Database of essays and project documentation
+- Text-to-speech functionality for content
+- Background music player
+- Responsive design for all devices
+
+## Projects Featured
+
+- AuraVote: A decentralized voting platform
+- No Signal: A privacy-first P2P communication platform
+- Weekly: Music and content platform
+- Simulichat: AI-powered chat platform
+- Echospeak: Voice and audio processing tools (Coming Soon)
+- Slopshooter: Gaming and entertainment platform (Coming Soon)
+- Pixelpunks: NFT and digital art platform (Coming Soon)
+
+## Essays and Documentation
+
+- The Future of Agentic AI Systems and Their Societal Implications
+- No Signal: A Developer's Journey to a Privacy-First P2P Communication Platform
+- Vibe Coding Misunderstood: The Real Role of Agentic AI and What People Are Getting Wrong
 
 ## Available Scripts
 

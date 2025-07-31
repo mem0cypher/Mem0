@@ -1,0 +1,121 @@
+.database-page {
+  padding: 20px;
+  position: relative;
+}
+
+.database-page h1 {
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px #00FFFF;
+}
+
+.database-table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  background-color: rgba(0, 0, 100, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.database-table th, .database-table td {
+  border: 1px solid #00FFFF;
+  padding: 12px;
+  text-align: left;
+}
+
+.database-table th {
+  background-color: #000088;
+  color: #00FFFF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+}
+
+.database-table tr {
+  transition: all 0.3s ease;
+}
+
+.database-table tr:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+.database-table a {
+  color: #FFFFFF;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+  padding: 5px;
+}
+
+.database-table a:hover {
+  color: #00FFFF;
+  text-shadow: 0 0 5px #00FFFF;
+  transform: translateX(5px);
+}
+
+/* Database interface elements */
+.database-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  background-color: #000066;
+  border: 1px solid #00FFFF;
+  color: #FFFFFF;
+  padding: 8px 15px;
+  border-radius: 4px;
+  width: 250px;
+  font-family: 'Courier New', monospace;
+}
+
+.filter-button {
+  background-color: #000088;
+  color: #00FFFF;
+  border: 1px solid #00FFFF;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+  transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+  background-color: #00FFFF;
+  color: #000088;
+}
+
+/* Status indicator */
+.status-indicator {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #00FF00;
+  border-radius: 50%;
+  margin-right: 10px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 255, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 255, 0, 0);
+  }
+} 
