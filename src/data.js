@@ -41,25 +41,6 @@ The question isn't if agentic AI will change our lives. It's whether we're actua
   },
   {
     id: 2,
-        title: 'No Signal: A Privacy-First P2P Platform',
-    type: 'Project Documentation',
-    date: '2025-01-20',
-    content: `No Signal is a hybrid peer-to-peer communication platform built from the ground up to be privacy-first user-friendly and completely open source. It supports decentralized messaging across both local and global networks using Bluetooth mDNS and WebRTC all secured by end-to-end encryption and powered by Web3 identity. This project is the result of years of iteration experimentation and growth. Since 2021 I've been trying to build the right communication system — one that doesn't rely on centralized servers respects user privacy and just works. No Signal is the result of that journey.
-
-At the heart of No Signal is the belief that users should have full control over their data and communication. Whether you're a developer a hacker or just someone who wants private messaging that actually works this platform is built to let you connect securely and directly. You don't need to rely on corporations hidden trackers or centralized databases. You don't even need an account. All you need is your device and optionally your Ethereum wallet if you want to use Web3 identity.
-
-No Signal runs locally or through the website. It works in the browser it works over LAN and it works globally peer-to-peer. Hybrid connectivity means it supports Bluetooth mesh for encrypted offline messaging between nearby devices LAN discovery through mDNS to find peers across your local network and WebRTC for secure real-time messaging across the internet. Every message is end-to-end encrypted with per-peer keys exchanged automatically and there's no server-side storage. Messages are ephemeral and exist only on the device. Even identity is optional and decentralized. You can link your Ethereum wallet for a persistent secure and portable identity with no signups and no KYC — just cryptographic authentication.
-
-The entire platform is open source and self-hosted. Anyone can run their own No Signal server using Docker. Production and local modes are fully separated which means you can use it offline without ever touching the internet. Privacy is baked into the architecture. There are no analytics no trackers and no logging. The Docker containers are hardened the HTTP headers are secure and everything is isolated through clean config. Every line of code is inspectable and auditable. Nothing is hidden.
-
-This project has been evolving since 2021. But it didn't take four years to build. It took four years to understand what needed to be built. I went through multiple redesigns. I scrapped entire systems. I learned every piece of the stack hands-on — from cryptography and WebRTC signaling to mDNS and Docker. No Signal represents the result of trial and error real growth and persistence. And only recently with tools like TypeScript Docker Web3 and LLMs like Claude 4 did it finally become possible to build the system I always imagined. What used to take me months to prototype I can now architect in a single day because I finally have both the vision and the right tools.
-
-No Signal is more than code. It's something I wanted to use for myself. Something I needed and wished existed for years. And now it does. It's fully open source and always will be. The hosted website version exists just for accessibility. It's for people who don't want to self-host but still want secure communication. But the platform doesn't rely on the site. Anyone can clone it run it or change it. That separation between the public deployment and private self-hosting is part of the design. Privacy should be accessible to anyone — even people who aren't technical — and it shouldn't be locked behind a walled garden.
-
-No Signal is my contribution to the future of decentralized and private communication. It's real it's usable and it's focused on giving power back to the individual. I built it to be lean secure modular and future-proof. Whether you're using the site or running your own server you're in full control. Thanks for reading and welcome to No Signal.`
-  },
-  {
-    id: 3,
         title: 'The Real Role of Agentic AI and What People Are Getting Wrong',
     type: 'Essay',
     date: '2025-07-25',
@@ -92,7 +73,7 @@ That's going to be a scary day for most people. But not for me. I know where I s
 If you can let go of your job title your role your identity if you can detach from all that and focus on meaning and purpose instead this shift won't be as hard. You'll start to realize that everything you were dealing with before this moment was the past. And the past doesn't matter anymore.`
   },
   {
-    id: 4,
+    id: 3,
     title: 'Journal Entry: Finding My Path',
     type: 'Personal Update',
     date: '2025-08-20',
