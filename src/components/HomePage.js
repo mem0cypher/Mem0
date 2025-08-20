@@ -28,38 +28,6 @@ const HomePage = () => {
       isImage: true,
       logoClass: "weekly-logo",
       url: "https://www.youtube.com/@WeeklySound"
-    },
-    {
-      id: 4,
-      name: "Simulichat",
-      logo: "/images/simulichat-logo.png",
-      isImage: true,
-      logoClass: "simulichat-logo",
-      url: "https://github.com/mem0cypher/SimulChat"
-    },
-    {
-      id: 7,
-      name: "Echospeak",
-      logo: "/images/echospeak-logo.png",
-      isImage: true,
-      logoClass: "echospeak-logo",
-      comingSoon: true
-    },
-    {
-      id: 5,
-      name: "Slopshooter",
-      logo: "/images/slopshooter-logo.png",
-      isImage: true,
-      logoClass: "slopshooter-logo",
-      comingSoon: true
-    },
-    {
-      id: 6,
-      name: "Pixelpunks",
-      logo: "/images/pixelpunks-logo.webp",
-      isImage: true,
-      logoClass: "pixelpunks-logo",
-      comingSoon: true
     }
   ];
 
