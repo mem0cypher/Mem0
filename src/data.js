@@ -90,6 +90,27 @@ But to do that you have to drop the ego. You have to stop being bitter or skepti
 That's going to be a scary day for most people. But not for me. I know where I stand. I know how to use this tech for myself. And I know there are opportunities ahead that we can't even imagine yet.
 
 If you can let go of your job title your role your identity if you can detach from all that and focus on meaning and purpose instead this shift won't be as hard. You'll start to realize that everything you were dealing with before this moment was the past. And the past doesn't matter anymore.`
+  },
+  {
+    id: 4,
+    title: 'Journal Entry: Finding My Path',
+    type: 'Personal Update',
+    date: '2025-08-20',
+    content: `So I've came to the conclusion that I'm not going to be some programmer or developer working at a company. I was never really chasing that in the first place, but I thought for a while maybe I should try, since "that's where the jobs are" or that's what people say. Over the years I've learned a lot of things—photo editing, video editing, design stuff, and even some coding here and there. But coding was always the one thing I tried to force myself into, thinking it could be useful. And man… I just didn't enjoy it. Sitting there for 4–5 hours straight, fixing bugs, trying to find the missing semicolon, stressing over why something won't compile—it just didn't click with me. Every time I quit, I'd feel guilty, like I gave up. But deep down I knew it wasn't wasted time, it just wasn't me.
+
+Now things are different. We have AI that can literally write code for me, debug it, explain it, and even automate the boring parts. What used to take hours of frustration is now something I can do on the side, in minutes, while I'm writing this very entry. It's wild. That shift made me realize something: I don't need to mold myself into a programmer. I don't need to force myself into a role just because it looks stable or respectable. Instead of bending my skills to work for someone else, I can turn everything I've learned into something for me.
+
+I don't want to chase jobs where I'm waiting for a company to say "yes, you're good enough." That's a trap. I want to prove it to myself that I'm already good enough, that I can build, create, and make something that has value. For the last 8–10 years I've been picking up skills here and there—editing, design, bits of coding, project building, messing with AI—and each one felt random at the time, but now I see how they all connect. They're tools in my toolbox. Not tools to clock into a job and build someone else's dream, but tools to build my own.
+
+My creativity has always been the thing guiding me. It's the one thing that never felt forced. That's why I create, that's why I keep doing it. But it hasn't been easy. With my ADHD, I always feel like I need to learn everything. Like I have to grab every skill and figure out how it works. It's not just curiosity, it's survival. I want to make sure I've got the knowledge and leverage so that I can position myself right—so when it comes time to create, I don't have to depend on anyone else. I know how to do it myself. It's stressful sometimes because it feels like my brain is running in every direction, like I want to build five different things at once. But the flip side is, I learn fast. I pick up stuff other people would just ignore.
+
+Most people, they live someone else's version of life. They do what they're told, or what's safe, or what their parents or friends expect. They let other people's ideas of "success" get pushed onto them. And then they pass that same mindset along. But me? I've never been like that. I've always been willing to take the risk, even if it means failing. At least I know I tried. At least I know I'm living my life.
+
+That's why I'm done with projects like Auravote and No Signal. They were fun for what they were, but they were hobby projects, and I can see that now. I don't regret them because they taught me things, but they're not my future.
+
+The real focus now is Weekly, skating, content creation, and streaming. That's where I know I can shine. That's where all these skills finally make sense. I can film, edit, design, create content, interact with people, and keep pushing my creativity out into the world. This is the stuff I don't get bored of. This is the stuff that makes me lose track of time in a good way.
+
+I feel like I'm finally ready to go all in. Not halfway, not juggling too many random projects at once. I'm betting on myself, and I know deep down I can do it. I'm creating something special, something that's fully mine. One day I'll come back and read this, and I'll smile at how simple life felt right now compared to where I'll be. I hope future me looks back and says, "yeah, that was the moment you stopped doubting and started building."`
   }
 ];
 
