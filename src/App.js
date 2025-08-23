@@ -1,9 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import './App.css';
 import HomePage from './components/HomePage';
 import DataItemPage from './components/DataItemPage';
-import AudioPlayer from './components/AudioPlayer';
 import IntroScreen from './components/IntroScreen';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 
@@ -11,7 +10,6 @@ const AppContent = () => {
   const { theme } = useTheme();
   const location = useLocation();
   const [showIntro, setShowIntro] = useState(true);
-  const audioPlayerRef = useRef(null);
   
   // Check if the user has already seen the intro
   useEffect(() => {
@@ -29,15 +27,8 @@ const AppContent = () => {
   // Hide theme switcher when viewing a database item
   const isDataItemPage = location.pathname.includes('/database/');
   
-  // Always include the AudioPlayer, but only show controls when intro is done
   return (
     <>
-      <AudioPlayer 
-        showControls={!showIntro} 
-        ref={audioPlayerRef}
-        forceAutoplay={showIntro} 
-      />
-      
       {showIntro ? (
         <IntroScreen onIntroComplete={handleIntroComplete} />
       ) : (
