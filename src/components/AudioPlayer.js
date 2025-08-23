@@ -3,7 +3,7 @@ import { useTheme } from '../context/ThemeContext';
 import './AudioPlayer.css';
 
 const playlist = [
-  { src: '/audio/background-music.mp3', title: 'Background Music', artwork: '/images/weekly-logo.png' }
+  { src: '/audio/background-music.mp3', title: 'Background Music', artwork: '/images/artwork/dumbo.png' }
 ];
 
 const AudioPlayer = forwardRef(({ showControls = true, forceAutoplay = false }, ref) => {
