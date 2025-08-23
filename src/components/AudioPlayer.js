@@ -3,10 +3,7 @@ import { useTheme } from '../context/ThemeContext';
 import './AudioPlayer.css';
 
 const playlist = [
-  { src: '/audio/background-music.mp3', title: 'Silicon Tare - Travis Scott', artwork: '/images/artwork/silicon-tare.png' },
-  { src: '/audio/Travis Scott - DUMBO (Official Audio).mp3', title: 'DUMBO - Travis Scott', artwork: '/images/artwork/dumbo.png' },
-  { src: '/audio/Feels So Strange.mov', title: 'Feels So Strange - Weekly', artwork: '/images/artwork/feels-so-strange.png' },
-  { src: '/audio/CHRYSTAL - The Days (Notion Remix).mp3', title: 'The Days - CHRYSTAL (Notion Remix)', artwork: '/images/artwork/crystal-days.png' }
+  { src: '/audio/background-music.mp3', title: 'Background Music', artwork: '/images/weekly-logo.png' }
 ];
 
 const AudioPlayer = forwardRef(({ showControls = true, forceAutoplay = false }, ref) => {
@@ -44,7 +41,8 @@ const AudioPlayer = forwardRef(({ showControls = true, forceAutoplay = false }, 
   }));
 
   const handleTrackEnd = () => {
-    playNext();
+    // With only one track, loop it
+    playTrack(0);
   };
 
   const playTrack = (index) => {
@@ -63,15 +61,13 @@ const AudioPlayer = forwardRef(({ showControls = true, forceAutoplay = false }, 
   };
 
   const playNext = () => {
-    const newIndex = (currentTrackIndex + 1) % playlist.length;
-    setCurrentTrackIndex(newIndex);
-    playTrack(newIndex);
+    // With only one track, just restart the same track
+    playTrack(0);
   };
 
   const playPrev = () => {
-    const newIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
-    setCurrentTrackIndex(newIndex);
-    playTrack(newIndex);
+    // With only one track, just restart the same track
+    playTrack(0);
   };
   
   // Function to create a reverb effect
