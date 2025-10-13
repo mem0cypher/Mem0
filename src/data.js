@@ -71,33 +71,6 @@ But to do that you have to drop the ego. You have to stop being bitter or skepti
 That's going to be a scary day for most people. But not for me. I know where I stand. I know how to use this tech for myself. And I know there are opportunities ahead that we can't even imagine yet.
 
 If you can let go of your job title your role your identity if you can detach from all that and focus on meaning and purpose instead this shift won't be as hard. You'll start to realize that everything you were dealing with before this moment was the past. And the past doesn't matter anymore.`
-  },
-  {
-    id: 3,
-    title: 'Journal Entry: Finding My Path',
-    type: 'Personal Update',
-    date: '2025-08-20',
-    content: `I've came to the conclusion that I was never meant to be a programmer or developer. I never really saw myself going down that road, but I still ended up spending too much time trying to make it work. I'd learn a little, hit a wall, get stuck in the same place, and it felt like I wasn't making any real progress. After a while, it just became obvious—it wasn't for me.
-
-And now with the way AI is, it's even clearer. The stuff I used to spend hours grinding on, stressing over, AI can handle in minutes. It's like a weight off my shoulders, because I don't have to force myself into something I never wanted in the first place.
-
-Over the years though, I've stacked up a lot of different skills. I've done photo and video editing—starting with Adobe and then moving into DaVinci Resolve. I've tried front-end and back-end web development, learned some Java, a little Python. Not enough to call myself a developer, but enough to know my way around it. I've dug into branding and marketing, learned how to build ads and campaigns on Facebook, Google, and other platforms. That came from looking into dropshipping and experimenting with business models. I pushed my creativity hard during that time, and what clicked most was branding—understanding culture, figuring out what people identify with, how they connect with things, how they see themselves through a product or a story. That's the part that made sense to me more than anything else.
-
-So yeah, I know a little programming, but I know way more about creating, presenting, and shaping things people actually care about. And now, with AI automating so much of the repetitive and technical work, I feel like all the skills I've picked up over the past 8–10 years finally have a place. I don't have to waste energy grinding at something that drains me. I can focus on what I actually love.
-
-I don't want to keep chasing jobs where some company decides if I'm "good enough." I want to prove it to myself, first and foremost, that I can build something real. My creativity has always been my compass—it's the reason I create, the reason I keep trying things, the reason I haven't given up.
-
-That being said, my ADHD plays into this a lot. I feel like I always have to do everything, always need to learn the "how to" for every tool, every skill. It's like a need, not just a want. It's overwhelming sometimes, but it's also given me leverage. It's the reason I know a little about almost everything on the computer. I can't just hand off responsibility and say, "I don't know how." I want to know how. And that makes me more independent.
-
-Most people, they live out someone else's version of life. They do what they're told, they play it safe, and they hand that same mindset down to the next person. That's not me. I've always been the one willing to take risks, even if it means failing, because at least then it's mine. At least I know I tried.
-
-That's why I've let go of projects like Auravote and No Signal. They were fun, and I learned from them, but they were always more like hobby projects. And now I see them as just that—hobbies. I'm not putting my main energy there anymore.
-
-Right now my focus is clear: Streaming, Content Creation, Branding (Weekly), and Marketing. That's where everything I've learned actually comes together. Weekly isn't just a name, it's a brand I'm building. It's culture, it's something people can connect with. Skating ties right into that—it's style, it's identity, it's another way of telling a story. Content creation and streaming give me the platform to show all of it, to let people in on the process and the vibe I'm creating. Marketing is how I push it out into the world. And branding is the glue—it's what shapes both my personal brand and any other brands I create.
-
-This time, I'm going all in. No halfway, no random distractions pulling me back into things I don't care about. I'm focused. I know this is where I thrive. I know this is where all the skills I've been collecting finally matter.
-
-I'm creating something special. Something that's mine. One day I'll look back at this entry and smile at how simple life felt right now compared to what I'll have built. I'll know this was the moment I stopped forcing myself into other people's paths and started carving out my own.`
   }
 ];
 
