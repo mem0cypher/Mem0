@@ -99,10 +99,20 @@
   border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
-.data-item-type, .data-item-date, .data-item-id, .data-item-size {
+.data-item-type, .data-item-date {
   font-family: var(--font-mono);
   font-size: 0.8em;
   color: var(--theme-accent);
+  background-color: rgba(40, 40, 40, 0.7);
+  padding: 3px 8px;
+  border-radius: 0;
+  border: 1px solid var(--theme-accent);
+}
+
+.data-item-id, .data-item-size {
+  font-family: var(--font-mono);
+  font-size: 0.8em;
+  color: var(--theme-text);
   background-color: rgba(40, 40, 40, 0.7);
   padding: 3px 8px;
   border-radius: 0;
