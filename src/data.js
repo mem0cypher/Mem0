@@ -38,39 +38,6 @@ We are approaching a world where humans no longer perform the bulk of labor, but
 If approached with foresight and care, the rise of agentic AI could mark not the end of meaningful work, but the beginning of a more liberated, creative, and equitable future. We must prepare ourselves, culturally and structurally, to steward this transformation.
 
 The question isn't if agentic AI will change our lives. It's whether we're actually ready for it.`
-  },
-  {
-    id: 2,
-        title: 'The Real Role of Agentic AI and What People Are Getting Wrong',
-    type: 'Essay',
-    date: '2025-07-25',
-    content: `There's been a lot of confusion lately around what vibe coding actually is. I've been seeing people throwing this term around like it means you're just casually coding with the help of an AI or that somehow using ChatGPT or Claude makes you a developer. The truth is most people don't understand what this technology actually is or what it's becoming.
-
-I didn't get into this space trying to become some expert or programmer. I just started learning the basics of LLMs and agentic systems. That's it. Now after spending 5 to 6 months working hands-on with these tools testing out the newest models and building with them every day I've realized it's not even about programming. It's more like managing these systems. It's about building workflows and understanding how these systems make decisions and carry out goals. And right now a lot of people are doing it wrong.
-
-Let's be honest. There are people running around thinking that just because they can use ChatGPT or some automated system that they're now a vibe coder or even a threat to traditional programmers. But here's the truth. I haven't met a single person using this tech who seriously thinks they're going to take all the dev jobs. Most of them aren't trying to go to school for computer science. They're not trying to become software engineers. They just want to use the tools to build something or automate something in their life. That's what vibe coding is. It's about exploring the space of possibility with AI as your co-pilot.
-
-And that's the thing people don't get. These agentic systems aren't about replacing developers. They're about building new types of relationships with machines. Right now systems like Claude and GPT are really good co-partners. They help automate small things. They can act on goals. They can plan steps. But managing them still takes human oversight.
-
-But we won't be managing them forever. As these systems become more general and more powerful they'll start creating their own goals. Their own priorities. And at that point they won't need us in the loop. We're talking about systems that will not only automate tasks but begin to act as autonomous agents in the real world. And honestly we don't even know what that's going to look like.
-
-I talk more about that in my other paper titled <a href="/data/1" style="background: rgba(0, 255, 127, 0.1); border: 1px solid rgba(0, 255, 127, 0.3); padding: 2px 6px; border-radius: 4px; color: #00ff7f; text-decoration: none; transition: all 0.2s ease;" onmouseover="this.style.background='rgba(0, 255, 127, 0.2)'" onmouseout="this.style.background='rgba(0, 255, 127, 0.1)'">The Future of Agentic AI Systems and Their Societal Implications</a>. I explain how these systems will shift from assistants to entities with their own roles in society. And how people aren't ready for what that means.
-
-Here's what people are missing. These systems are already copyable. And instructors are all we really need right now. Once that process becomes smooth once you can spin up agents and teach them anything using simple tools it's game over. Especially with government bills like Accelerating Federal Permitting of Data Center Infrastructure which will speed up the building of data centers that fuel these AI systems. That's the reality. We are deep in the AI race now.
-
-People are distracted. Scrolling. Judging. Thinking it's still about hard work. But they're going to get hit with a rude awakening when this tech really kicks in and starts wiping out jobs. I'm not saying that to be dramatic. It's just real.
-
-Jobs that define people's lives like office jobs admin roles anything that involves sitting at a desk following rules checking boxes and responding to emails those are the first to go. They've been outdated since the 90s. Blue collar jobs will stick around longer. But the idea of a career path or full time employment as your identity is going to collapse. That's why making your money work for you instead of working for money is so important right now. You need to be ahead of the curve. You need to be investing and building before it's too late.
-
-There are two types of people. The ones who work for their money. And the ones who make their money work for them. I know people who do both. Hard workers. Smart thinkers. People who aren't dumb enough to rely on a company to keep them alive. They take control. Even if it's messy. Even if they fail. They move forward.
-
-Because if you don't have control over your time you don't have control over your life. And that's why I'm excited about this tech. Not because I want to become a programmer. But because I want my time back. I want to use this tech to actually live better. Be more productive. Improve my quality of life.
-
-But to do that you have to drop the ego. You have to stop being bitter or skeptical. You have to let go of the old way of thinking. The truth is most people never even ask why they do what they do. They just follow instructions. Work to survive. But once you take away the reason to survive once survival is automated then what.
-
-That's going to be a scary day for most people. But not for me. I know where I stand. I know how to use this tech for myself. And I know there are opportunities ahead that we can't even imagine yet.
-
-If you can let go of your job title your role your identity if you can detach from all that and focus on meaning and purpose instead this shift won't be as hard. You'll start to realize that everything you were dealing with before this moment was the past. And the past doesn't matter anymore.`
   }
 ];
 
