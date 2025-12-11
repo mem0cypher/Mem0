@@ -4,10 +4,10 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 export const themes = {
   mem0: {
     name: 'mem0',
-    backgroundColor: '#000000',
-    textColor: '#FFFFFF',
-    accentColor: '#333333',
-    highlightColor: '#CCCCCC',
+    backgroundColor: '#000011',
+    textColor: '#00AAFF',
+    accentColor: '#0066AA',
+    highlightColor: '#0088CC',
     headerTitle: 'mem0',
     sidebarTitle: 'Projects',
     mainTitle: 'database',

@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000000;
+  background-color: #000011;
   z-index: 9999;
   transition: opacity 1s ease;
   pointer-events: none; /* Allow clicks to pass through */
@@ -20,8 +20,8 @@
 .intro-text {
   font-family: var(--font-heading, 'Orbitron', sans-serif);
   font-size: 2em;
-  color: #FFFFFF;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+  color: #00AAFF;
+  text-shadow: 0 0 15px #00AAFF, 0 0 30px #0066AA;
   letter-spacing: 3px;
   text-transform: lowercase;
   font-weight: normal;
@@ -53,7 +53,7 @@
 }
 
 @keyframes pulse {
-  0% { text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); }
-  50% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.9); }
-  100% { text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); }
+  0% { text-shadow: 0 0 15px #00AAFF, 0 0 30px #0066AA; }
+  50% { text-shadow: 0 0 25px #00AAFF, 0 0 50px #0066AA, 0 0 75px #004488; }
+  100% { text-shadow: 0 0 15px #00AAFF, 0 0 30px #0066AA; }
 } 
