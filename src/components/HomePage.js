@@ -28,6 +28,21 @@ const HomePage = () => {
       isImage: true,
       logoClass: "weekly-logo",
       url: "https://www.youtube.com/@WeeklySound"
+    },
+    {
+      id: 4,
+      name: "Streaming",
+      logo: "/images/Live.png",
+      isImage: true,
+      url: "https://linktr.ee/mem0cypher"
+    },
+    {
+      id: 5,
+      name: "Echospeak",
+      logo: "/images/echospeak-logo.png",
+      isImage: true,
+      comingSoon: true,
+      url: "#"
     }
   ];
 
@@ -48,7 +63,7 @@ const HomePage = () => {
               className={`project-item ${item.comingSoon ? 'coming-soon' : ''}`}
             >
               <a 
-                href={item.comingSoon ? '#' : item.url} 
+                href={item.url} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 onClick={item.comingSoon ? (e) => e.preventDefault() : null}

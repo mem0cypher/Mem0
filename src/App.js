@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import HomePage from './components/HomePage';
 import DataItemPage from './components/DataItemPage';
 import IntroScreen from './components/IntroScreen';
 import VoidSimulation from './components/VoidSimulation';
-import { ThemeProvider, useTheme } from './context/ThemeContext';
+import { ThemeProvider } from './context/ThemeContext';
 
 const AppContent = () => {
-  const { theme } = useTheme();
-  const location = useLocation();
   const [showIntro, setShowIntro] = useState(true);
   const [showVoid, setShowVoid] = useState(false);
   
@@ -58,9 +56,6 @@ const AppContent = () => {
         break;
     }
   };
-  
-  // Hide theme switcher when viewing a database item
-  const isDataItemPage = location.pathname.includes('/database/');
   
   return (
     <>

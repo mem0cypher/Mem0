@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { PointerLockControls, Box, Plane } from '@react-three/drei';
 import * as THREE from 'three';
@@ -11,7 +11,13 @@ function FirstPersonController({ moveSpeed = 0.1, onComputerInteract, setShowInt
   // Auto-lock pointer when component mounts
   useEffect(() => {
     const timer = setTimeout(() => {
-      gl.domElement.requestPointerLock();
+      try {
+        gl.domElement.requestPointerLock().catch(err => {
+          console.warn('Error requesting pointer lock on mount:', err);
+        });
+      } catch (e) {
+        console.warn('Error in pointer lock:', e);
+      }
     }, 100);
     return () => clearTimeout(timer);
   }, [gl]);
@@ -95,7 +101,7 @@ function FirstPersonController({ moveSpeed = 0.1, onComputerInteract, setShowInt
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('keyup', handleKeyUp);
     };
-  }, []);
+  }, [camera, onComputerInteract]);
 
   useFrame(() => {
     if (!controlsRef.current) return;
@@ -174,6 +180,8 @@ function PlayerHand() {
         case 'KeyD':
           moveState.current.right = true;
           break;
+        default:
+          break;
       }
     };
 
@@ -190,6 +198,8 @@ function PlayerHand() {
           break;
         case 'KeyD':
           moveState.current.right = false;
+          break;
+        default:
           break;
       }
     };
@@ -267,130 +277,6 @@ function PlayerHand() {
           emissive="#000044"
           emissiveIntensity={0.5}
           roughness={0.6}
-        />
-      </Box>
-    </group>
-  );
-}
-
-// Tree Component with full leafy canopy
-function Tree({ position, height = 8, trunkWidth = 0.3, canopySize = 3 }) {
-  return (
-    <group position={position}>
-      {/* Trunk */}
-      <Box args={[trunkWidth, height, trunkWidth]} position={[0, height/2, 0]}>
-        <meshStandardMaterial 
-          color="#001133" 
-          emissive="#000022"
-          emissiveIntensity={0.3}
-        />
-      </Box>
-      
-      {/* Full leafy canopy - sphere-like shape */}
-      <Box args={[canopySize, canopySize * 0.8, canopySize]} position={[0, height + canopySize * 0.3, 0]}>
-        <meshStandardMaterial 
-          color="#003355" 
-          emissive="#002244"
-          emissiveIntensity={0.5}
-        />
-      </Box>
-      
-      {/* Additional leaf layers for fullness */}
-      <Box args={[canopySize * 0.8, canopySize * 0.6, canopySize * 0.8]} position={[0, height + canopySize * 0.6, 0]}>
-        <meshStandardMaterial 
-          color="#003366" 
-          emissive="#002255"
-          emissiveIntensity={0.5}
-        />
-      </Box>
-      
-      <Box args={[canopySize * 0.6, canopySize * 0.4, canopySize * 0.6]} position={[0, height + canopySize * 0.8, 0]}>
-        <meshStandardMaterial 
-          color="#004477" 
-          emissive="#002266"
-          emissiveIntensity={0.5}
-        />
-      </Box>
-    </group>
-  );
-}
-
-// Jagged Mountain Component
-function Mountain({ position, width = 20, height = 15 }) {
-  return (
-    <group position={position}>
-      {/* Jagged mountain base - multiple peaks */}
-      <Box args={[width * 0.4, height, width/2]} position={[-width * 0.2, height/2, 0]}>
-        <meshStandardMaterial 
-          color="#001122" 
-          emissive="#000011"
-          emissiveIntensity={0.2}
-        />
-      </Box>
-      
-      <Box args={[width * 0.3, height * 1.2, width/2]} position={[0, height * 0.6, 0]}>
-        <meshStandardMaterial 
-          color="#001122" 
-          emissive="#000011"
-          emissiveIntensity={0.2}
-        />
-      </Box>
-      
-      <Box args={[width * 0.35, height * 0.8, width/2]} position={[width * 0.25, height * 0.4, 0]}>
-        <meshStandardMaterial 
-          color="#001122" 
-          emissive="#000011"
-          emissiveIntensity={0.2}
-        />
-      </Box>
-      
-      {/* Jagged peaks */}
-      <Box args={[width * 0.15, height * 0.4, width * 0.2]} position={[-width * 0.2, height * 1.2, 0]}>
-        <meshStandardMaterial 
-          color="#002233" 
-          emissive="#001122"
-          emissiveIntensity={0.3}
-        />
-      </Box>
-      
-      <Box args={[width * 0.12, height * 0.6, width * 0.2]} position={[0, height * 1.5, 0]}>
-        <meshStandardMaterial 
-          color="#002233" 
-          emissive="#001122"
-          emissiveIntensity={0.3}
-        />
-      </Box>
-      
-      <Box args={[width * 0.1, height * 0.3, width * 0.2]} position={[width * 0.25, height * 1.1, 0]}>
-        <meshStandardMaterial 
-          color="#002233" 
-          emissive="#001122"
-          emissiveIntensity={0.3}
-        />
-      </Box>
-      
-      {/* Snow caps on peaks */}
-      <Box args={[width * 0.08, height * 0.2, width * 0.15]} position={[-width * 0.2, height * 1.4, 0]}>
-        <meshStandardMaterial 
-          color="#004466" 
-          emissive="#003355"
-          emissiveIntensity={0.6}
-        />
-      </Box>
-      
-      <Box args={[width * 0.06, height * 0.3, width * 0.15]} position={[0, height * 1.8, 0]}>
-        <meshStandardMaterial 
-          color="#004466" 
-          emissive="#003355"
-          emissiveIntensity={0.6}
-        />
-      </Box>
-      
-      <Box args={[width * 0.05, height * 0.15, width * 0.15]} position={[width * 0.25, height * 1.25, 0]}>
-        <meshStandardMaterial 
-          color="#004466" 
-          emissive="#003355"
-          emissiveIntensity={0.6}
         />
       </Box>
     </group>
@@ -723,17 +609,10 @@ function RetroOS({ onExit }) {
 
 // Retro Window Component
 function RetroWindow({ window, onClose, onMinimize }) {
-  const [isDragging, setIsDragging] = useState(false);
-  const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
-
   if (window.minimized) return null;
 
   const handleMouseDown = (e) => {
-    setIsDragging(true);
-    setDragOffset({
-      x: e.clientX - window.x,
-      y: e.clientY - window.y
-    });
+    // Drag functionality placeholder
   };
 
   return (
@@ -823,335 +702,8 @@ function WindowContent({ program }) {
   }
 }
 
-// Nested Game View - Game within the computer screen
-function NestedGameView({ onExit }) {
-  return (
-    <div className="nested-reality">
-      <div className="nested-header">
-        <div className="nested-title">REMOTE CONTROL MODE</div>
-        <div className="nested-status">CONTROLLING SELF</div>
-      </div>
-      
-      <div className="nested-game-container">
-        <Canvas
-          className="nested-canvas"
-          camera={{ position: [0, 1.6, 0], fov: 75, near: 0.1, far: 50 }}
-          style={{ background: '#000022' }}
-        >
-          <NestedAlleyScene />
-        </Canvas>
-        
-        {/* Nested game crosshair */}
-        <div className="nested-crosshair">
-          <div className="nested-crosshair-h"></div>
-          <div className="nested-crosshair-v"></div>
-        </div>
-      </div>
-      
-      <div className="nested-footer">
-        <div className="nested-controls">WASD: Move | Mouse: Look | SPACE: Exit to void</div>
-      </div>
-    </div>
-  );
-}
 
-// Nested Alley Scene - The game world inside the computer
-function NestedAlleyScene() {
-  const { camera } = useThree();
-  const [playerPos, setPlayerPos] = useState([0, 1.6, 0]);
-  
-  // Movement state for nested game
-  const nestedMoveState = useRef({
-    forward: false,
-    backward: false,
-    left: false,
-    right: false
-  });
-  
-  const nestedVelocity = useRef({ x: 0, z: 0 });
-  const nestedDirection = useRef({ x: 0, z: 0 });
 
-  useEffect(() => {
-    camera.position.set(0, 1.6, 0);
-    camera.rotation.order = 'YXZ';
-  }, [camera]);
-
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      switch (event.code) {
-        case 'KeyW':
-          nestedMoveState.current.forward = true;
-          break;
-        case 'KeyS':
-          nestedMoveState.current.backward = true;
-          break;
-        case 'KeyA':
-          nestedMoveState.current.left = true;
-          break;
-        case 'KeyD':
-          nestedMoveState.current.right = true;
-          break;
-      }
-    };
-
-    const handleKeyUp = (event) => {
-      switch (event.code) {
-        case 'KeyW':
-          nestedMoveState.current.forward = false;
-          break;
-        case 'KeyS':
-          nestedMoveState.current.backward = false;
-          break;
-        case 'KeyA':
-          nestedMoveState.current.left = false;
-          break;
-        case 'KeyD':
-          nestedMoveState.current.right = false;
-          break;
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('keyup', handleKeyUp);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('keyup', handleKeyUp);
-    };
-  }, []);
-
-  useFrame(() => {
-    const speed = 0.05;
-    
-    nestedDirection.current.z = Number(nestedMoveState.current.forward) - Number(nestedMoveState.current.backward);
-    nestedDirection.current.x = Number(nestedMoveState.current.right) - Number(nestedMoveState.current.left);
-
-    if (nestedMoveState.current.forward || nestedMoveState.current.backward) {
-      nestedVelocity.current.z -= nestedDirection.current.z * speed;
-    }
-    if (nestedMoveState.current.left || nestedMoveState.current.right) {
-      nestedVelocity.current.x -= nestedDirection.current.x * speed;
-    }
-
-    // Apply movement with collision detection
-    const newX = camera.position.x - nestedVelocity.current.x;
-    const newZ = camera.position.z - nestedVelocity.current.z;
-    
-    // Simple collision bounds for alley
-    if (newX > -8 && newX < 8) {
-      camera.position.x = newX;
-    }
-    if (newZ > -15 && newZ < 15) {
-      camera.position.z = newZ;
-    }
-
-    nestedVelocity.current.x *= 0.9;
-    nestedVelocity.current.z *= 0.9;
-    
-    setPlayerPos([camera.position.x, camera.position.y, camera.position.z]);
-  });
-
-  return (
-    <>
-      {/* Lighting for alley */}
-      <ambientLight intensity={0.3} color="#004488" />
-      <pointLight position={[0, 8, 0]} intensity={0.8} color="#0088FF" />
-      <pointLight position={[-5, 5, -10]} intensity={0.4} color="#0066AA" />
-      <pointLight position={[5, 5, -10]} intensity={0.4} color="#0066AA" />
-      
-      {/* Alley Environment */}
-      {/* Floor */}
-      <Plane args={[20, 30]} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]}>
-        <meshStandardMaterial 
-          color="#001155" 
-          emissive="#000033"
-          emissiveIntensity={0.3}
-        />
-      </Plane>
-      
-      {/* Left Wall */}
-      <Box args={[0.5, 8, 30]} position={[-8, 4, 0]}>
-        <meshStandardMaterial 
-          color="#002277" 
-          emissive="#000044"
-          emissiveIntensity={0.2}
-        />
-      </Box>
-      
-      {/* Right Wall */}
-      <Box args={[0.5, 8, 30]} position={[8, 4, 0]}>
-        <meshStandardMaterial 
-          color="#002277" 
-          emissive="#000044"
-          emissiveIntensity={0.2}
-        />
-      </Box>
-      
-      {/* Back Wall */}
-      <Box args={[16, 8, 0.5]} position={[0, 4, -15]}>
-        <meshStandardMaterial 
-          color="#002277" 
-          emissive="#000044"
-          emissiveIntensity={0.2}
-        />
-      </Box>
-      
-      {/* Front Wall */}
-      <Box args={[16, 8, 0.5]} position={[0, 4, 15]}>
-        <meshStandardMaterial 
-          color="#002277" 
-          emissive="#000044"
-          emissiveIntensity={0.2}
-        />
-      </Box>
-      
-      {/* Floating desk in alley */}
-      <group position={[0, 0, -8]}>
-        <Box args={[2, 0.1, 1]} position={[0, 1, 0]}>
-          <meshStandardMaterial 
-            color="#003388" 
-            emissive="#001155"
-            emissiveIntensity={0.5}
-          />
-        </Box>
-        
-        {/* Computer on desk */}
-        <Box args={[0.8, 0.6, 0.1]} position={[0, 1.4, -0.3]}>
-          <meshStandardMaterial 
-            color="#001144" 
-            emissive="#000022"
-            emissiveIntensity={0.3}
-          />
-        </Box>
-        
-        <Box args={[0.7, 0.5, 0.05]} position={[0, 1.4, -0.25]}>
-          <meshStandardMaterial 
-            color="#004488" 
-            emissive="#002244"
-            emissiveIntensity={0.8}
-          />
-        </Box>
-      </group>
-      
-      {/* Floating orbs in alley */}
-      <FlickeringOrb position={[-6, 6, -5]} />
-      <FlickeringOrb position={[6, 7, -8]} />
-      <FlickeringOrb position={[-3, 5, 5]} />
-      <FlickeringOrb position={[4, 8, 8]} />
-      <FlickeringOrb position={[0, 9, -12]} />
-      <FlickeringOrb position={[-7, 4, 0]} />
-      <FlickeringOrb position={[7, 6, -3]} />
-      
-      {/* Player Hand in nested game */}
-      <NestedPlayerHand playerPos={playerPos} />
-    </>
-  );
-}
-
-// Player hand for nested game
-function NestedPlayerHand({ playerPos }) {
-  const handRef = useRef();
-  const { camera } = useThree();
-  const walkBob = useRef(0);
-  
-  const moveState = useRef({
-    forward: false,
-    backward: false,
-    left: false,
-    right: false
-  });
-
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      switch (event.code) {
-        case 'KeyW':
-          moveState.current.forward = true;
-          break;
-        case 'KeyS':
-          moveState.current.backward = true;
-          break;
-        case 'KeyA':
-          moveState.current.left = true;
-          break;
-        case 'KeyD':
-          moveState.current.right = true;
-          break;
-      }
-    };
-
-    const handleKeyUp = (event) => {
-      switch (event.code) {
-        case 'KeyW':
-          moveState.current.forward = false;
-          break;
-        case 'KeyS':
-          moveState.current.backward = false;
-          break;
-        case 'KeyA':
-          moveState.current.left = false;
-          break;
-        case 'KeyD':
-          moveState.current.right = false;
-          break;
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('keyup', handleKeyUp);
-
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('keyup', handleKeyUp);
-    };
-  }, []);
-  
-  useFrame((state) => {
-    if (handRef.current) {
-      const isMoving = moveState.current.forward || moveState.current.backward || 
-                      moveState.current.left || moveState.current.right;
-      
-      if (isMoving) {
-        walkBob.current += 0.15;
-      } else {
-        walkBob.current *= 0.95;
-      }
-      
-      const handOffset = new THREE.Vector3(0.4, -0.3, -0.6);
-      handOffset.applyQuaternion(camera.quaternion);
-      
-      handRef.current.position.copy(camera.position).add(handOffset);
-      handRef.current.rotation.copy(camera.rotation);
-      
-      const bobAmount = Math.sin(walkBob.current) * 0.05;
-      const swayAmount = Math.cos(walkBob.current * 0.5) * 0.02;
-      
-      handRef.current.position.y += bobAmount;
-      handRef.current.position.x += swayAmount;
-      handRef.current.rotation.z += Math.sin(walkBob.current) * 0.1;
-    }
-  });
-
-  return (
-    <group ref={handRef}>
-      <Box args={[0.15, 0.15, 0.4]} position={[0, 0, 0.2]}>
-        <meshStandardMaterial 
-          color="#001155" 
-          emissive="#000033"
-          emissiveIntensity={0.5}
-          roughness={0.7}
-        />
-      </Box>
-      <Box args={[0.18, 0.18, 0.25]} position={[0, 0, -0.1]}>
-        <meshStandardMaterial 
-          color="#002266" 
-          emissive="#000044"
-          emissiveIntensity={0.5}
-          roughness={0.6}
-        />
-      </Box>
-    </group>
-  );
-}
 
 // Computer Interface Component
 function ComputerInterface({ isVisible, onExit }) {
@@ -1339,96 +891,6 @@ function NightSky() {
   );
 }
 
-// Forest Environment with Trees and Mountains
-function ForestEnvironment() {
-  return (
-    <>
-      {/* Trees moved further from spawn area */}
-      <Tree position={[-20, 0, -5]} height={10} canopySize={4} />
-      <Tree position={[-18, 0, -18]} height={8} canopySize={3} />
-      <Tree position={[-15, 0, 15]} height={9} canopySize={3.5} />
-      <Tree position={[20, 0, -12]} height={11} canopySize={4.5} />
-      <Tree position={[18, 0, 8]} height={8} canopySize={3} />
-      <Tree position={[15, 0, -25]} height={9} canopySize={3.5} />
-      <Tree position={[-25, 0, -30]} height={12} canopySize={5} />
-      <Tree position={[25, 0, -28]} height={10} canopySize={4} />
-      
-      {/* Small trees moved to perimeter */}
-      <Tree position={[-12, 0, -2]} height={4} canopySize={2} />
-      <Tree position={[13, 0, -3]} height={3} canopySize={1.5} />
-      <Tree position={[-10, 0, 18]} height={5} canopySize={2.5} />
-      <Tree position={[12, 0, 20]} height={4} canopySize={2} />
-      <Tree position={[-16, 0, -10]} height={6} canopySize={2.5} />
-      <Tree position={[17, 0, -6]} height={5} canopySize={2} />
-      <Tree position={[-18, 0, 8]} height={7} canopySize={3} />
-      <Tree position={[19, 0, 12]} height={6} canopySize={2.5} />
-      
-      {/* Medium trees moved further out */}
-      <Tree position={[-28, 0, -12]} height={8} canopySize={3.5} />
-      <Tree position={[26, 0, -18]} height={9} canopySize={4} />
-      <Tree position={[-24, 0, 18]} height={7} canopySize={3} />
-      <Tree position={[28, 0, 15]} height={8} canopySize={3.5} />
-      <Tree position={[-22, 0, -25]} height={9} canopySize={4} />
-      <Tree position={[24, 0, -22]} height={8} canopySize={3.5} />
-      
-      {/* More distant trees */}
-      <Tree position={[-25, 0, -30]} height={7} canopySize={3} />
-      <Tree position={[25, 0, -35]} height={8} canopySize={3.5} />
-      <Tree position={[-30, 0, 10]} height={9} canopySize={4} />
-      <Tree position={[30, 0, 5]} height={10} canopySize={4.5} />
-      <Tree position={[0, 0, 25]} height={8} canopySize={3.5} />
-      <Tree position={[-10, 0, 30]} height={9} canopySize={4} />
-      <Tree position={[10, 0, 30]} height={7} canopySize={3} />
-      
-      {/* Dense forest areas */}
-      <Tree position={[-35, 0, -20]} height={11} canopySize={4.5} />
-      <Tree position={[-32, 0, -25]} height={9} canopySize={4} />
-      <Tree position={[-28, 0, -22]} height={10} canopySize={4.5} />
-      <Tree position={[35, 0, -18]} height={12} canopySize={5} />
-      <Tree position={[32, 0, -22]} height={8} canopySize={3.5} />
-      <Tree position={[28, 0, -28]} height={9} canopySize={4} />
-      
-      
-      {/* Far background trees */}
-      <Tree position={[-40, 0, -40]} height={6} canopySize={2.5} />
-      <Tree position={[40, 0, -45]} height={7} canopySize={3} />
-      <Tree position={[-45, 0, 20]} height={8} canopySize={3.5} />
-      <Tree position={[45, 0, 15]} height={9} canopySize={4} />
-      <Tree position={[0, 0, 40]} height={7} canopySize={3} />
-      <Tree position={[-20, 0, 45]} height={8} canopySize={3.5} />
-      <Tree position={[20, 0, 45]} height={6} canopySize={2.5} />
-      
-      {/* Mountain backdrop */}
-      <Mountain position={[0, 0, -60]} width={40} height={20} />
-      <Mountain position={[-35, 0, -55]} width={25} height={15} />
-      <Mountain position={[35, 0, -55]} width={30} height={18} />
-      <Mountain position={[-60, 0, -50]} width={20} height={12} />
-      <Mountain position={[60, 0, -50]} width={25} height={16} />
-      
-      {/* Snow particles */}
-      {Array.from({ length: 50 }, (_, i) => (
-        <Box 
-          key={i}
-          args={[0.05, 0.05, 0.05]} 
-          position={[
-            (Math.random() - 0.5) * 100,
-            Math.random() * 15 + 5,
-            (Math.random() - 0.5) * 100
-          ]}
-        >
-          <meshStandardMaterial 
-            color="#AACCFF" 
-            emissive="#6699CC"
-            emissiveIntensity={0.3}
-            transparent
-            opacity={0.6}
-          />
-        </Box>
-      ))}
-    </>
-  );
-}
-
 // Open Void Environment
 function VoidRoom() {
   return (
@@ -1502,38 +964,25 @@ function VoidGameScene({ onComputerInteract, setShowInteractPrompt }) {
 
 // Main VoidSimulation Component
 function VoidSimulation({ isVisible, onClose }) {
-  const [isLocked, setIsLocked] = useState(false);
   const [showComputer, setShowComputer] = useState(false);
   const [showInteractPrompt, setShowInteractPrompt] = useState(false);
 
-  useEffect(() => {
-    const handlePointerLock = () => {
-      setIsLocked(document.pointerLockElement !== null);
-    };
-
-    document.addEventListener('pointerlockchange', handlePointerLock);
-    return () => {
-      document.removeEventListener('pointerlockchange', handlePointerLock);
-    };
-  }, []);
-
   const handleComputerInteract = () => {
-    setShowComputer(true);
     // Exit pointer lock when using computer
-    if (document.pointerLockElement) {
-      document.exitPointerLock();
+    try {
+      if (document.pointerLockElement) {
+        document.exitPointerLock();
+      }
+    } catch (e) {
+      // Silently fail if pointer lock exit fails
     }
+    // Set showComputer after pointer lock is released
+    setShowComputer(true);
   };
 
   const handleComputerExit = () => {
     setShowComputer(false);
-    // Re-enter pointer lock when exiting computer
-    setTimeout(() => {
-      const canvas = document.querySelector('.void-canvas canvas');
-      if (canvas) {
-        canvas.requestPointerLock();
-      }
-    }, 100);
+    // Don't try to re-acquire pointer lock - let user click canvas to regain it
   };
 
   if (!isVisible) return null;

@@ -30,7 +30,7 @@ const StructuredContent = ({ content }) => {
     // Check if this looks like a list item (starts with common list patterns)
     const isListItem = (
       block.match(/^[A-Z][^.]*:/) || // Pattern like "Something:"
-      block.match(/^[A-Z][^.]*\.$/) && block.length < 200 // Short sentences ending with period
+      (block.match(/^[A-Z][^.]*\.$/) && block.length < 200) // Short sentences ending with period
     );
     
     if (isListItem) {

@@ -6,7 +6,7 @@
 
 /* Sidebar Styles */
 .sidebar {
-  width: 220px;
+  width: 242px;
   background: linear-gradient(145deg, rgba(0, 0, 17, 0.9), rgba(0, 0, 17, 0.7));
   border-right: 2px solid var(--theme-accent);
   padding: 0;
@@ -20,7 +20,7 @@
 }
 
 .sidebar-header {
-  padding: 20px 18px;
+  padding: 22px 19.8px;
   border-bottom: 2px solid var(--theme-accent);
   background: linear-gradient(135deg, rgba(0, 0, 17, 0.8), rgba(0, 0, 17, 0.6));
   transition: all 0.5s ease;
@@ -40,7 +40,7 @@
 
 .sidebar-header h2 {
   margin: 0;
-  font-size: 1.3em;
+  font-size: 1.43em;
   font-weight: 600;
   color: var(--theme-text);
   transition: all 0.5s ease;
@@ -51,14 +51,14 @@
 }
 
 .project-list {
-  padding: 8px 0;
+  padding: 8.8px 0;
   background: rgba(0, 0, 0, 0.1);
 }
 
 .project-item {
   display: flex;
   align-items: center;
-  padding: 14px 18px;
+  padding: 15.4px 19.8px;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -92,8 +92,8 @@
   align-items: center;
   transition: all 0.3s ease;
   justify-content: center;
-  width: 40px; /* To ensure consistent alignment */
-  margin-right: 12px;
+  width: 44px; /* To ensure consistent alignment */
+  margin-right: 13.2px;
 }
 
 .project-logo {
@@ -101,8 +101,8 @@
 }
 
 .project-logo-img {
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
   margin-right: 12px;
   border-radius: 4px;
@@ -154,7 +154,7 @@
 
 .project-name {
   font-family: var(--font-heading);
-  font-size: 0.8em;
+  font-size: 0.88em;
   letter-spacing: 1px;
   color: var(--theme-text);
   transition: color 0.5s ease;
@@ -169,7 +169,7 @@
 }
 
 .database-header {
-  padding: 15px 20px;
+  padding: 16.5px 22px;
   border-bottom: 1px solid var(--theme-text);
   display: flex;
   justify-content: space-between;
@@ -181,7 +181,7 @@
 
 .database-header h1 {
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.65em;
   color: var(--theme-text);
   transition: color 0.5s ease;
   text-shadow: 0 0 10px #00AAFF;
@@ -195,14 +195,14 @@
 
 /* Database list styles - for mem0 theme */
 .thought-list {
-  padding: 15px;
+  padding: 16.5px;
 }
 
 .thought-item {
   display: flex;
   align-items: center;
-  padding: 12px 15px;
-  margin-bottom: 8px;
+  padding: 13.2px 16.5px;
+  margin-bottom: 8.8px;
   background-color: rgba(0, 0, 17, 0.7);
   border: 1px solid var(--theme-accent);
   border-radius: 0;
@@ -239,9 +239,9 @@
 
 .thought-row-number {
   font-family: var(--font-mono);
-  font-size: 0.8em;
+  font-size: 0.88em;
   color: var(--theme-accent);
-  width: 30px;
+  width: 33px;
   flex-shrink: 0;
   text-align: right;
   padding-right: 10px;
@@ -250,9 +250,9 @@
 
 .thought-date {
   font-family: var(--font-mono);
-  font-size: 0.8em;
+  font-size: 0.88em;
   color: #AAAAAA;
-  width: 100px;
+  width: 110px;
   flex-shrink: 0;
   padding-left: 10px;
 }
@@ -261,7 +261,7 @@
   flex-grow: 1;
   color: var(--theme-text);
   text-align: left;
-  padding: 0 15px;
+  padding: 0 16.5px;
   font-family: var(--font-body);
   transition: color 0.5s ease;
   position: relative;
@@ -282,7 +282,7 @@
 
 .thought-type {
   font-family: var(--font-mono);
-  font-size: 0.7em;
+  font-size: 0.77em;
   color: var(--theme-text);
   background-color: rgba(0, 68, 136, 0.7);
   padding: 3px 8px;
