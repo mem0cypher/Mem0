@@ -27,7 +27,7 @@ const HomePage = () => {
       logo: "/images/weekly-logo.png",
       isImage: true,
       logoClass: "weekly-logo",
-      url: "https://www.youtube.com/@WeeklySound"
+      url: "https://open.spotify.com/playlist/0pOb7h66pxfx2tHR1HTdfI"
     },
     {
       id: 4,
