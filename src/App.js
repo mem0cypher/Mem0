@@ -4,12 +4,10 @@ import './App.css';
 import HomePage from './components/HomePage';
 import DataItemPage from './components/DataItemPage';
 import IntroScreen from './components/IntroScreen';
-import VoidSimulation from './components/VoidSimulation';
 import { ThemeProvider } from './context/ThemeContext';
 
 const AppContent = () => {
   const [showIntro, setShowIntro] = useState(true);
-  const [showVoid, setShowVoid] = useState(false);
   
   // Check if the user has already seen the intro
   useEffect(() => {
@@ -19,42 +17,9 @@ const AppContent = () => {
     }
   }, []);
   
-  // ESC key listener for void simulation
-  useEffect(() => {
-    const handleKeyPress = (event) => {
-      if (event.key === 'Escape') {
-        setShowVoid(prev => !prev);
-      }
-    };
-
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, []);
-  
   const handleIntroComplete = () => {
     setShowIntro(false);
     localStorage.setItem('hasSeenIntro', 'true');
-  };
-
-  const handleVoidObjectClick = (objectType) => {
-    console.log('Void object clicked:', objectType);
-    // Handle different object interactions here
-    switch(objectType) {
-      case 'portfolio':
-        setShowVoid(false);
-        // Navigate to portfolio section
-        break;
-      case 'projects':
-        setShowVoid(false);
-        // Navigate to projects
-        break;
-      case 'about':
-        setShowVoid(false);
-        // Navigate to about
-        break;
-      default:
-        break;
-    }
   };
   
   return (
@@ -74,13 +39,6 @@ const AppContent = () => {
           </main>
         </div>
       )}
-      
-      {/* VHS Blue Void Simulation - Triggered by ESC */}
-      <VoidSimulation 
-        isVisible={showVoid}
-        onClose={() => setShowVoid(false)}
-        onObjectClick={handleVoidObjectClick}
-      />
     </>
   );
 };

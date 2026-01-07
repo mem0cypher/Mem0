@@ -38,7 +38,14 @@ We are approaching a world where humans no longer perform the bulk of labor, but
 If approached with foresight and care, the rise of agentic AI could mark not the end of meaningful work, but the beginning of a more liberated, creative, and equitable future. We must prepare ourselves, culturally and structurally, to steward this transformation.
 
 The question isn't if agentic AI will change our lives. It's whether we're actually ready for it.`
-  }
+  },
+  {
+    id: 2,
+    title: 'A Quick Note for 2026',
+    type: 'Note',
+    date: '2026-01-06',
+    content: `It’s a new year, and the world is changing faster than ever before. Lately, I’ve been reflecting a lot and feel ready to start writing down my thoughts more consistently, to document them here as the years go on.
+I’ll be sharing how I see the world right now, what I believe is really happening, and how I plan to adapt and step into the best version of myself amid this era of AI and surveillance capitalism.
+I’m not an activist, and I don’t hate what’s unfolding. Quite the opposite. I truly feel more prepared than ever for the change. I’m excited and ready to become my fullest, most capable self in this new reality.`
+  },
 ];
-
-
