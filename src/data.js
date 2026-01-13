@@ -57,7 +57,7 @@ I’m not an activist, and I don’t hate what’s unfolding. Quite the opposite
 
 Lately I've been heavy into OpenCode and Claude's coding abilities, while still hitting GPT 5.2 for free on Windsurf whenever I need something less syntax sensitive. Next up: diving deeper into API cloud testing with Google Gemini plus Claude, plus whatever other platforms look promising, and figuring out how to weave them smoothly into my daily workflow.
 
-I'm also planning a small update to this website. Right now it has no backend and honestly I kinda like it that way. Just push frontend changes to git and boom everything updates. Still, I know I should probably build a proper backend eventually (like I keep saying for all my projects), but I've been focused elsewhere and yeah, a little lazy about it.
+I'm also planning a small update to this website. Right now it has no backend and honestly I kinda like it that way. Just push frontend changes to git and boom everything updates. Still, I know I should probably build a proper backend eventually (like I have for all my projects), but I've been focused elsewhere and yeah, a little lazy about it.
 
 My view of the world keeps shifting every day. The more I think about all the centralized tech we rely on, the more I feel the pull to build the perfect personal workflow, an ecosystem that lets me leverage what I already know plus the tools I have, and actually create real advantage.
 
