@@ -48,4 +48,27 @@ The question isn't if agentic AI will change our lives. It's whether we're actua
 I’ll be sharing how I see the world right now, what I believe is really happening, and how I plan to adapt and step into the best version of myself amid this era of AI and surveillance capitalism.
 I’m not an activist, and I don’t hate what’s unfolding. Quite the opposite. I truly feel more prepared than ever for the change. I’m excited and ready to become my fullest, most capable self in this new reality.`
   },
+  {
+    id: 3,
+    title: 'first 13 days of 2026',
+    type: 'Note',
+    date: '2026-01-13',
+    content: `So here we are the first 13 days of 2026 and I've been deep in the trenches upgrading my agentic workflow. Been testing a bunch of new software, frameworks, and the latest features to really squeeze every drop of value out of the tools I use every day to manage and build with agentic AI.
+
+Lately I've been heavy into OpenCode and Claude's coding abilities, while still hitting GPT 5.2 for free on Windsurf whenever I need something less syntax sensitive. Next up: diving deeper into API cloud testing with Google Gemini plus Claude, plus whatever other platforms look promising, and figuring out how to weave them smoothly into my daily workflow.
+
+I'm also planning a small update to this website. Right now it has no backend and honestly I kinda like it that way. Just push frontend changes to git and boom everything updates. Still, I know I should probably build a proper backend eventually (like I keep saying for all my projects), but I've been focused elsewhere and yeah, a little lazy about it.
+
+My view of the world keeps shifting every day. The more I think about all the centralized tech we rely on, the more I feel the pull to build the perfect personal workflow, an ecosystem that lets me leverage what I already know plus the tools I have, and actually create real advantage.
+
+The past couple weeks have been a lot of organization and reflection: looking back at the last 2 to 3 years, cataloging the wins, the losses, the lessons, and sketching out a rough plan for the next few months. The core idea is simple, stay consistent and just get shit done.
+
+Right now I've got 4 to 5 projects active at once, and I'm about to start creating more content plus live streaming on Twitch and Kick. I've always got something cooking, but the real challenge is organizing and structuring everything so there's almost zero wasted time.
+
+The dream setup looks like this: I'm streaming while video is auto editing in the background, posts are getting scheduled and dropped on Twitter weekly, my agents are quietly grinding on projects, and I'm just taking a quick break to hit the washroom, all at the same time.
+
+If I nail this agentic localized AI workflow right, calling APIs, scraping what I need, automating the boring bits, I can legitimately kill 10 birds with one stone while still doing the selfish stuff I actually want to do.
+
+That's the big goal for January. By the time February rolls around, this whole system should be finished.`
+  },
 ];
