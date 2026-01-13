@@ -63,10 +63,6 @@ My view of the world keeps shifting every day. The more I think about all the ce
 
 The past couple weeks have been a lot of organization and reflection: looking back at the last 2 to 3 years, cataloging the wins, the losses, the lessons, and sketching out a rough plan for the next few months. The core idea is simple, stay consistent and just get shit done.
 
-Right now I've got 4 to 5 projects active at once, and I'm about to start creating more content plus live streaming on Twitch and Kick. I've always got something cooking, but the real challenge is organizing and structuring everything so there's almost zero wasted time.
-
-The dream setup looks like this: I'm streaming while video is auto editing in the background, posts are getting scheduled and dropped on Twitter weekly, my agents are quietly grinding on projects, and I'm just taking a quick break to hit the washroom, all at the same time.
-
 If I nail this agentic localized AI workflow right, calling APIs, scraping what I need, automating the boring bits, I can legitimately kill 10 birds with one stone while still doing the selfish stuff I actually want to do.
 
 That's the big goal for January. By the time February rolls around, this whole system should be finished.`
