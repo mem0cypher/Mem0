@@ -50,7 +50,7 @@ I’m not an activist, and I don’t hate what’s unfolding. Quite the opposite
   },
   {
     id: 3,
-    title: 'first 13 days of 2026',
+    title: 'First 13 days of 2026',
     type: 'Note',
     date: '2026-01-13',
     content: `So here we are the first 13 days of 2026 and I've been deep in the trenches upgrading my agentic workflow. Been testing a bunch of new software, frameworks, and the latest features to really squeeze every drop of value out of the tools I use every day to manage and build with agentic AI.
@@ -84,7 +84,7 @@ This journey has taught me a lot about what true control means, going beyond the
 
 Lately, with the rise of localized AI, those old habits resurfaced. I caught myself thinking I had to avoid cloud-based LLMs like Grok, ChatGPT, or Claude because they're not fully open-source or decentralized. But then I paused: What am I really hiding? Who cares if I'm just making apps or creating content? I'm not Edward Snowden or some secret agent—I'm a regular guy living with my parents, born in 2000 during the social media boom. The government's tracking is invasive, no doubt, with microphones, cameras, and algorithms everywhere. Yet, as I've grown, I've seen the benefits: surveillance can protect against threats like terrorism, and centralized tech creates jobs and opportunities. It's not about surrendering everything; it's about balance. I still use VPNs, proxies, and privacy practices as second nature, but I don't let them isolate me anymore.
 
-The truth is, full isolation isn't beneficial—it's lonely and limits opportunity. Life is about communication, getting things done, and leveraging tools and people. You can't do it all alone. I've neglected centralized resources for too long out of misplaced fear, holding myself back. Governments and companies like Google already know plenty about us through our devices, but for someone like me who's not breaking laws, it's not the end of the world. I was being overly paranoid about it, fear-mongering myself out of potential. Now, I'm embracing a yin-yang approach: decentralized where it empowers me (like owning my data), centralized where it accelerates progress (like cloud AI for efficiency). This hybrid mindset lets me navigate both worlds without extremes.
+The truth is, full isolation isn't beneficial—it's lonely and limits opportunity. Life is about communication, getting things done, and leveraging tools and people. You can't do it all alone. I've neglected centralized resources for too long out of misplaced fear, holding myself back. Governments and companies like Google already know plenty about us through our devices, but for someone like me who's not breaking laws, it's not the end of the world. I was being overly paranoid about it, fear-mongering myself out of potential. Now, I'm embracing a yin-yang approach: decentralized where it empowers me (like owning my finances and money more), centralized where it accelerates progress (like cloud AI for efficiency). This hybrid mindset lets me navigate both worlds without extremes.
 
 At this point in my life, I'm coming back to my senses after six or seven years of this internal battle. I'm merging back into the world, ready to communicate and build without hiding. 2026 is going to be my year—I'm coming back hard, armed with everything I've learned. Privacy matters, but so does living fully. It's time to move forward with balance, not fear.`
   },
